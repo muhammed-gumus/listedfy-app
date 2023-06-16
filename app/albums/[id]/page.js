@@ -14,7 +14,7 @@ export default function Category({ params: karams }) {
     };
     effect();
   }, [karams.id]);
-
+  console.log(response);
   return (
     <main className="flex flex-col items-center justify-center py-6 px-24  bg-black text-white font-inter font-medium">
       <nav className="flex items-center justify-between w-full pb-12">
@@ -36,7 +36,7 @@ export default function Category({ params: karams }) {
           </Link>
         </div>
       </nav>
-      <div className="grid grid-cols-4 gap-16 items-center justify-center">
+      <div className="grid grid-cols-4 gap-8 items-center justify-center">
         {response &&
           response.items.map(({ track }) => (
             <div className="">
@@ -50,9 +50,13 @@ export default function Category({ params: karams }) {
                   alt={`${track.name} playlist image`}
                   priority
                 />
-                <div className="text-center flex flex-col">
-                <p>{track.album.artists[0].name}</p>
-                <p className="text-sm">{track.name}</p>
+                <div className="text-center items-center flex flex-col">
+                  <div className="flex flex-row gap-4">
+                    {track.artists.map(({ name }) => (
+                      <div>{name}</div>
+                    ))}
+                  </div>
+                  <p className="">{track.name}</p>
                 </div>
               </Link>
             </div>
