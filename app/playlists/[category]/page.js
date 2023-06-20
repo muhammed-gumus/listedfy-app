@@ -19,7 +19,7 @@ export default function Category({ params }) {
   }, [params.category]);
 
   return (
-    <main className="flex flex-col items-center py-6 px-24  bg-black text-white font-inter font-medium">
+    <main className="flex flex-col items-center h-full w-full py-6 px-24  bg-black text-white font-inter font-medium">
       <nav className="flex items-center justify-between w-full pb-12">
         <Link
           href="/"
@@ -30,16 +30,17 @@ export default function Category({ params }) {
             alt="Logo"
             className="w-24 h-24 bg-white rounded-full"
           />
-          <h1 className="text-2xl font-semibold">LISTEDFY</h1>
+          <span className="bg-gradient-to-r from-amber-400 to-white bg-clip-text text-4xl font-extrabold text-transparent">
+            Listedfy
+          </span>
         </Link>
-
-        <div>
-          <Link href="/" className="bg-white text-black p-2 px-4 rounded-full">
+        <Link href="/addSong">
+          <button className="border-2 border-amber-400 text-white py-2 px-4 rounded-full hover:">
             Add Song
-          </Link>
-        </div>
+          </button>
+        </Link>
       </nav>
-      <div className="grid grid-cols-4 gap-8">
+      <div className="grid w-full h-full grid-cols-4 gap-8">
         {response &&
           response.playlists.items.map((playlist) => (
             <Link key={playlist.id} href={`/albums/${playlist.id}`}>
@@ -51,7 +52,6 @@ export default function Category({ params }) {
             </Link>
           ))}
       </div>
-      {/* <pre>{JSON.stringify({ response }, null, 2)}</pre> */}
     </main>
   );
 }

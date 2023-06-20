@@ -35,7 +35,6 @@ export default function Tracks({ params }) {
 
   return (
     <main className="flex flex-col items-center justify-center py-6 px-24  bg-black text-white font-inter font-medium">
-      {/* <pre>{JSON.stringify({ params }, null, 2)}</pre> */}
       <nav className="flex items-center justify-between w-full pb-12">
         <Link
           href="/"
@@ -46,13 +45,15 @@ export default function Tracks({ params }) {
             alt="Logo"
             className="w-24 h-24 bg-white rounded-full"
           />
-          <h1 className="text-2xl font-semibold">LISTEDFY</h1>
+          <span className="bg-gradient-to-r from-amber-400 to-white bg-clip-text text-4xl font-extrabold text-transparent">
+            Listedfy
+          </span>
         </Link>
-        <div>
-          <Link href="/" className="bg-white text-black p-2 px-4 rounded-full">
+        <Link href="/addSong">
+          <button className="border-2 border-amber-400 text-white py-2 px-4 rounded-full hover:">
             Add Song
-          </Link>
-        </div>
+          </button>
+        </Link>
       </nav>
       <div className="grid grid-cols-2 gap-32">
         <div className="">
@@ -61,24 +62,26 @@ export default function Tracks({ params }) {
 
         <div className="flex flex-col items-left gap-4">
           <div className="flex flex-row gap-4">
-            <div>{"Şarkıcı Adı: "}</div>
-            <div className="flex flex-row gap-4">
+            <div>{"Artists: "}</div>
+            <div className="flex flex-row gap-4 opacity-70">
               {response &&
                 response.artists.map(({ name }) => <div>{name}</div>)}
             </div>
           </div>
           <div className="flex flex-row gap-4">
-            <div>{"Şarkı Adı:"}</div>
-            {response && response.album.name}
+            <div>{"Song:"}</div>
+            <div className="opacity-70">{response && response.album.name}</div>
           </div>
 
           <div className="flex flex-row gap-4">
-            <div>{"Takipçi Sayısı:"}</div>
-            <div>{art && art.followers.total}</div>
+            <div>{"Followers:"}</div>
+            <div className="opacity-70">{art && art.followers.total}</div>
           </div>
           <div className="flex flex-row gap-4">
-            <div>{"Yüklenme Tarihi:"}</div>
-            <div>{response && response.album.release_date}</div>
+            <div>{"Date:"}</div>
+            <div className="opacity-70">
+              {response && response.album.release_date}
+            </div>
           </div>
           <div>
             {response && (
