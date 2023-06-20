@@ -26,6 +26,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@chakra-ui/icons", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:2.0.19"],\
           ["@chakra-ui/next-js", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:2.1.4"],\
           ["@chakra-ui/react", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:2.7.1"],\
           ["@emotion/react", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:11.11.1"],\
@@ -46,6 +47,7 @@ const RAW_RUNTIME_STATE =
           ["react-audioplayer", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:0.3.1"],\
           ["react-dom", "virtual:675b63867e4f190b82d0fdc1163b1de0708fffaea1ad12ab824f2e9e32917dd75a67202e8cd68d20171039594b8dce0a6f0ab2a6fe4cb7dad06d0960bdf7ca29#npm:18.2.0"],\
           ["react-h5-audio-player", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:3.8.6"],\
+          ["react-icons", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:4.9.0"],\
           ["react-spotify-embed", "npm:2.0.3"],\
           ["react-text-loop-next", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:0.0.3"],\
           ["tailwindcss", "npm:3.3.2"]\
@@ -802,12 +804,57 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["virtual:4d1a4c4391bdc921eddff22cfca62f591dcb05820e3c8607ab345b80246152c7011aab9fac6bee9add4dd7fe437c727bdc2d14cf6b6f8ade3005da244effb868#npm:3.0.16", {\
+        "packageLocation": "./.yarn/__virtual__/@chakra-ui-icon-virtual-360e95af0f/4/.yarn/berry/cache/@chakra-ui-icon-npm-3.0.16-6cab4cf07b-9.zip/node_modules/@chakra-ui/icon/",\
+        "packageDependencies": [\
+          ["@chakra-ui/icon", "virtual:4d1a4c4391bdc921eddff22cfca62f591dcb05820e3c8607ab345b80246152c7011aab9fac6bee9add4dd7fe437c727bdc2d14cf6b6f8ade3005da244effb868#npm:3.0.16"],\
+          ["@chakra-ui/shared-utils", "npm:2.0.5"],\
+          ["@chakra-ui/system", null],\
+          ["@types/chakra-ui__system", null],\
+          ["@types/react", null],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@chakra-ui/system",\
+          "@types/chakra-ui__system",\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["virtual:c256025dde9b5bbf0c6e7a802973555923a2235e06a0fb90a1a48984e54467e15ac79b6ba202703e973e490873686f8c0820787c23eb41486801388e611f86c4#npm:3.0.16", {\
         "packageLocation": "./.yarn/__virtual__/@chakra-ui-icon-virtual-7d4a027422/4/.yarn/berry/cache/@chakra-ui-icon-npm-3.0.16-6cab4cf07b-9.zip/node_modules/@chakra-ui/icon/",\
         "packageDependencies": [\
           ["@chakra-ui/icon", "virtual:c256025dde9b5bbf0c6e7a802973555923a2235e06a0fb90a1a48984e54467e15ac79b6ba202703e973e490873686f8c0820787c23eb41486801388e611f86c4#npm:3.0.16"],\
           ["@chakra-ui/shared-utils", "npm:2.0.5"],\
           ["@chakra-ui/system", "virtual:c256025dde9b5bbf0c6e7a802973555923a2235e06a0fb90a1a48984e54467e15ac79b6ba202703e973e490873686f8c0820787c23eb41486801388e611f86c4#npm:2.5.8"],\
+          ["@types/chakra-ui__system", null],\
+          ["@types/react", null],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@chakra-ui/system",\
+          "@types/chakra-ui__system",\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@chakra-ui/icons", [\
+      ["npm:2.0.19", {\
+        "packageLocation": "../../../.yarn/berry/cache/@chakra-ui-icons-npm-2.0.19-591e45b411-9.zip/node_modules/@chakra-ui/icons/",\
+        "packageDependencies": [\
+          ["@chakra-ui/icons", "npm:2.0.19"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:2.0.19", {\
+        "packageLocation": "./.yarn/__virtual__/@chakra-ui-icons-virtual-4d1a4c4391/4/.yarn/berry/cache/@chakra-ui-icons-npm-2.0.19-591e45b411-9.zip/node_modules/@chakra-ui/icons/",\
+        "packageDependencies": [\
+          ["@chakra-ui/icons", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:2.0.19"],\
+          ["@chakra-ui/icon", "virtual:4d1a4c4391bdc921eddff22cfca62f591dcb05820e3c8607ab345b80246152c7011aab9fac6bee9add4dd7fe437c727bdc2d14cf6b6f8ade3005da244effb868#npm:3.0.16"],\
+          ["@chakra-ui/system", null],\
           ["@types/chakra-ui__system", null],\
           ["@types/react", null],\
           ["react", "npm:18.2.0"]\
@@ -7673,6 +7720,28 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["react-icons", [\
+      ["npm:4.9.0", {\
+        "packageLocation": "../../../.yarn/berry/cache/react-icons-npm-4.9.0-633c387145-9.zip/node_modules/react-icons/",\
+        "packageDependencies": [\
+          ["react-icons", "npm:4.9.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:4.9.0", {\
+        "packageLocation": "./.yarn/__virtual__/react-icons-virtual-af9f11dc3c/4/.yarn/berry/cache/react-icons-npm-4.9.0-633c387145-9.zip/node_modules/react-icons/",\
+        "packageDependencies": [\
+          ["react-icons", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:4.9.0"],\
+          ["@types/react", null],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["react-is", [\
       ["npm:16.13.1", {\
         "packageLocation": "../../../.yarn/berry/cache/react-is-npm-16.13.1-a9b9382b4f-9.zip/node_modules/react-is/",\
@@ -8190,6 +8259,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["spotify-example", "workspace:."],\
+          ["@chakra-ui/icons", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:2.0.19"],\
           ["@chakra-ui/next-js", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:2.1.4"],\
           ["@chakra-ui/react", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:2.7.1"],\
           ["@emotion/react", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:11.11.1"],\
@@ -8210,6 +8280,7 @@ const RAW_RUNTIME_STATE =
           ["react-audioplayer", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:0.3.1"],\
           ["react-dom", "virtual:675b63867e4f190b82d0fdc1163b1de0708fffaea1ad12ab824f2e9e32917dd75a67202e8cd68d20171039594b8dce0a6f0ab2a6fe4cb7dad06d0960bdf7ca29#npm:18.2.0"],\
           ["react-h5-audio-player", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:3.8.6"],\
+          ["react-icons", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:4.9.0"],\
           ["react-spotify-embed", "npm:2.0.3"],\
           ["react-text-loop-next", "virtual:fdb14b40a9efb731d505c1f9707221f8b779abc7c9d7560855bb0904eaf5d2ef72c27c96d04f242e758ba491f3d44d85153a8f160edaa8c39df2008e093ae395#npm:0.0.3"],\
           ["tailwindcss", "npm:3.3.2"]\
