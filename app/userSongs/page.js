@@ -71,7 +71,7 @@ export default async function Tracks({ initialItems }) {
 
 export async function getData(context) {
   try {
-    const res = await fetch("http://localhost:3000/api/listItems", {
+    const res = await fetch("https://listedfy-app-git-main-muhammed-gumus.vercel.app/api/listItems", {
       cache: "no-cache",
     });
     return await res.json();
