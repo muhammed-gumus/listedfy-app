@@ -18,7 +18,7 @@ import {
   FormErrorMessage,
   FormHelperText,
 } from "@chakra-ui/react";
-import { InfoOutlineIcon, SmallAddIcon } from "@chakra-ui/icons";
+import { SmallAddIcon } from "@chakra-ui/icons";
 
 import { useState, useRef, useContext } from "react";
 import { ItemsContext } from "../context/items";
@@ -96,7 +96,7 @@ export function FormModal({ song }) {
                 placeholder="e.g. 01Cabbar01"
               />{" "}
               {isError && (
-                <FormErrorMessage>Email is required.</FormErrorMessage>
+                <FormErrorMessage>Username is required.</FormErrorMessage>
               )}
             </FormControl>
           </ModalBody>

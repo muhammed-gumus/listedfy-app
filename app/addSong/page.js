@@ -6,6 +6,7 @@ import { FormModal } from "../components/Modal";
 import { Navbar } from "../components/Navbar";
 import Link from "next/link";
 import { Button } from "@chakra-ui/react";
+import { InfoOutlineIcon } from "@chakra-ui/icons";
 
 let debounceTimeout;
 
