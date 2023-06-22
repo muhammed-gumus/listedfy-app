@@ -1,10 +1,7 @@
 "use client";
 
 import { spotifyClient } from "@/spotify/client";
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import AudioPlayer from "react-h5-audio-player";
-import "react-h5-audio-player/lib/styles.css";
 import { Spotify } from "react-spotify-embed";
 import {Navbar} from "../../components/Navbar"
 
@@ -58,6 +55,10 @@ export default function Tracks({ params }) {
           <div className="flex flex-row gap-4">
             <div>{"Followers:"}</div>
             <div className="opacity-70">{art && art.followers.total}</div>
+          </div>
+          <div className="flex flex-row gap-4">
+            <div>{"Popularity:"}</div>
+            <div className="opacity-70">{art && art.popularity}</div>
           </div>
           <div className="flex flex-row gap-4">
             <div>{"Date:"}</div>

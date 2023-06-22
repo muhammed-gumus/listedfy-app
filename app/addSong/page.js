@@ -1,10 +1,11 @@
 "use client";
 import { spotifyClient as spotifyClient } from "@/spotify/client";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Spotify } from "react-spotify-embed";
 import { FormModal } from "../components/Modal";
-import {Navbar} from "../components/Navbar"
+import { Navbar } from "../components/Navbar";
+import Link from "next/link";
+import { Button } from "@chakra-ui/react";
 
 let debounceTimeout;
 
@@ -35,8 +36,6 @@ export default function Home() {
       if (src) {
         const art1 = await spotifyClient.search(src, ["track"]);
         setart1(art1);
-        console.log(src);
-        console.log(art1);
       }
     };
     debounce(effect);
@@ -44,7 +43,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col items-center py-6 px-24 bg-black text-white font-inter font-medium w-full h-full">
-      <Navbar/>
+      <Navbar />
 
       <div className="mt-16 container mx-auto bg-amber-400 rounded-lg px-14 py-8 text-black">
         <form>
@@ -74,7 +73,7 @@ export default function Home() {
           </div>
         </form>
       </div>
-      <div className="grid grid-cols-3 gap-8 w-full m-8 h-full items-center justify-center">
+      <div className="grid grid-cols-3 gap-6 w-full m-8 h-full items-center justify-center">
         {art1 &&
           art1.tracks &&
           art1.tracks.items &&
@@ -86,7 +85,26 @@ export default function Home() {
                 link={track.album.external_urls.spotify}
               />
 
-              <FormModal song={track} />
+              <div className="flex w-full items-center justify-end">
+                <FormModal song={track} />
+                <p className="opacity-50">|</p>
+                <Link key={track.id} href={`/tracks/${track.id}`}>
+                  <Button
+                    border="0px"
+                    color="white"
+                    borderTopRightRadius="sm"
+                    borderTopLeftRadius="0"
+                    colorScheme="teal"
+                    variant="outline"
+                    borderTop="0px"
+                    _hover={{
+                      color: "yellow.400",
+                    }}
+                  >
+                    Details
+                  </Button>
+                </Link>
+              </div>
             </div>
           ))}
       </div>

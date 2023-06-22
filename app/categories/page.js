@@ -1,13 +1,11 @@
 "use client";
 import { spotifyClient as spotifyClient } from "@/spotify/client";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import {Navbar} from "../components/Navbar"
 
 export default function Home() {
   const [response, setCategories] = useState();
-  const [art, setArt] = useState();
   const [pipe, setPipe] = useState([]);
 
   useEffect(() => {

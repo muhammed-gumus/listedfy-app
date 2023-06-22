@@ -1,9 +1,5 @@
 "use client";
-import { spotifyClient as spotifyClient } from "@/spotify/client";
-import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { TextLoop } from "react-text-loop-next";
 import {Navbar} from "./components/Navbar"
 
 export default function Home() {

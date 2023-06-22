@@ -12,7 +12,7 @@ const ItemsProvider = ({ children }) => {
       // we will send a POST request with the data required to create an item
       const res = await fetch("/api/create", {
         method: "POST",
-        body: JSON.stringify({ item }),
+        body: JSON.stringify(item),
         headers: { "Content-Type": "application/json" },
       });
       const newItem = await res.json();
@@ -64,6 +64,19 @@ const ItemsProvider = ({ children }) => {
     }
   };
 
+  const listItems = async () => {
+    try {
+      const res = await fetch("/api/listItems", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      });
+      const data = await res.json();
+      return data;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <ItemsContext.Provider
       value={{
@@ -72,6 +85,7 @@ const ItemsProvider = ({ children }) => {
         updateItem,
         deleteItem,
         addItem,
+        listItems,
       }}
     >
       {children}

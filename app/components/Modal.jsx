@@ -14,9 +14,13 @@ import {
   FormLabel,
   Input,
   Text,
+  Icon,
+  FormErrorMessage,
+  FormHelperText,
 } from "@chakra-ui/react";
+import { InfoOutlineIcon, SmallAddIcon } from "@chakra-ui/icons";
 
-import { useEffect, useState, useRef, useContext } from "react";
+import { useState, useRef, useContext } from "react";
 import { ItemsContext } from "../context/items";
 
 export function FormModal({ song }) {
@@ -25,31 +29,45 @@ export function FormModal({ song }) {
   const initialRef = useRef(null);
 
   const [item, setItem] = useState("");
-  const { addItem } = useContext(ItemsContext);
+  const { addItem, items } = useContext(ItemsContext);
+  const isError = item === "";
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addItem({
-      name: song.album.name,
-      username: item,
-    });
+
+    if (item !== "") {
+      onClose();
+      addItem({
+        url: song.external_urls.spotify,
+        songName: song.album.name,
+        username: item,
+        artistName: song.album.artists[0].name,
+        imageUrl: song.album.images[0].url,
+        followers: song.popularity.toString(),
+        date: song.album.release_date,
+        id: song.id,
+      });
+    }
     setItem("");
   };
 
   return (
     <>
       <Button
-        onClick={onOpen}
-        borderColor="white"
+        border="0px"
         color="white"
+        borderTopRightRadius="sm"
+        borderTopLeftRadius="0"
         colorScheme="teal"
         variant="outline"
         borderTop="0px"
-        borderTopRadius="0"
-        width="35%"
-        _hover={{ bg: "black", borderColor: "white", color: "white" }}
+        onClick={onOpen}
+        _hover={{
+          color: "yellow.400",
+        }}
       >
-        Button
+        Add
+        <SmallAddIcon />
       </Button>
 
       <Modal
@@ -65,7 +83,7 @@ export function FormModal({ song }) {
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={6}>
-            <FormControl onSubmit={handleSubmit}>
+            <FormControl isInvalid={isError} isRequired onSubmit={handleSubmit}>
               <FormLabel color="black" opacity="0.7" fontSize="sm">
                 Username
               </FormLabel>
@@ -76,7 +94,10 @@ export function FormModal({ song }) {
                 ref={initialRef}
                 color="black"
                 placeholder="e.g. 01Cabbar01"
-              />
+              />{" "}
+              {isError && (
+                <FormErrorMessage>Email is required.</FormErrorMessage>
+              )}
             </FormControl>
           </ModalBody>
 

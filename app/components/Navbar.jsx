@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 export function Navbar() {
   return (
@@ -25,7 +24,7 @@ export function Navbar() {
             Add Song
           </button>
         </Link>
-        <Link href="/addSong">
+        <Link href="/userSongs">
           <button className=" text-white py-2 px-4 rounded-full hover:text-amber-400">
             User Songs
           </button>
